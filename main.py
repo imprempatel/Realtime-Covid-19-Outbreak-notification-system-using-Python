@@ -3,17 +3,17 @@ import requests
 from bs4 import BeautifulSoup,NavigableString
 import time
 
-def notifyMe(title, message):
-    notification.notify(
+def notifyMe(title, message):   
+    notification.notify(        # syntax for notification function provided by plyer module
         title = title,
         message = message,
-        app_icon = r'C:\Users\PREM PATEL\Desktop\MiniProject\corona_virus.ico',
+        app_icon = r'C:\Users\PREM PATEL\Desktop\MiniProject\corona_virus.ico', #give your own path 
         timeout = 5
     )
 
 
 def getData(url):
-    r = requests.get(url)
+    r = requests.get(url)   #request.get method is a function provided by request module
     return r.text
 
 if __name__ == "__main__":
